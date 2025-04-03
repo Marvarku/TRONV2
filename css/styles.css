@@ -4100,6 +4100,19 @@ body.search-is-visible {
     min-height: calc(25.5 * var(--space));
     position: relative;
 }
+.s-about__slide-bg {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 80%;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
 
 .s-hero__slide-bg {
     display: block;
@@ -5260,6 +5273,13 @@ body.search-is-visible {
     overflow: hidden
 }
 
+.wantToWork-area2 {
+    position: relative;
+    z-index: 0;
+    background: #151515;
+    overflow: hidden
+}
+
 .wantToWork-area .wantToWork-caption h2 {
     color: #fff;
     font-size: 50px;
@@ -5371,4 +5391,23 @@ body.search-is-visible {
 .slide-in-right.visible {
     opacity: 1;
     transform: translateX(0);
+}
+
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.card{
+    background-color: white;
+}
+
+.card-body{
+    padding: 15px;
 }

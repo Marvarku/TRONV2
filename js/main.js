@@ -326,5 +326,13 @@
     });
     
     
+    document.addEventListener("scroll", function() {
+        const fadeInImage = document.querySelector(".fade-in");
+        const rect = fadeInImage.getBoundingClientRect();
+        if (rect.top < window.innerHeight) {
+            fadeInImage.classList.add("visible");
+        }
+    });
+    
 
 })(jQuery);
