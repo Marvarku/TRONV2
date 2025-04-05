@@ -5269,7 +5269,8 @@ body.search-is-visible {
 .wantToWork-area {
     position: relative;
     z-index: 0;
-    background: #1ea194;
+    /* background: #1ea194; */
+    background: #0e0f0f;
     overflow: hidden
 }
 
