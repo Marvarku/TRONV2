@@ -54,9 +54,9 @@
         <div class="s-header__logo">
             <a class="logo" href="index.html">
                 <!-- <img src="images/logo.svg" alt="Homepage"> -->
-                 <h3 style="color: aliceblue; font-family: Kanit, sans-serif; font-weight: 900; margin-bottom: 70px;">TRON</h3>
+                 <h3>TRON</h3>
             </a>
-        </div>
+        </div> 
 
         <div class="row s-header__navigation">
 
@@ -133,7 +133,7 @@
 
         <div class="s-hero__slider">
 
-            <div class="s-hero__slide">
+            <div class="s-hero__slide active">
 
                 <div class="s-hero__slide-bg" style="background-image: url('images/slide1-bg-3000.jpg');"></div>
 
@@ -141,7 +141,7 @@
                     <div class="column">
                         <div class="s-hero__slide-meta">
                             <span class="cat-links">
-                                <a href="#0" style="font-weight:500;">Connection</a>
+                                <a href="#0">Connection</a>
                                 <a href="#0">Innovation</a>
                                 <a href="#0">Diversity</a>
                             </span>
@@ -166,7 +166,7 @@
                         <div class="s-hero__slide-meta">
                             <span class="cat-links">
                                 <a href="#0">Connection</a>
-                                <a href="#0" style="font-weight:500;">Innovation</a>
+                                <a href="#0">Innovation</a>
                                 <a href="#0">Diversity</a>
                             </span>
                         </div>
@@ -190,7 +190,7 @@
                             <span class="cat-links">
                                 <a href="#0">Connection</a>
                                 <a href="#0">Innovation</a>
-                                <a href="#0" style="font-weight:500;">Diversity.</a>
+                                <a href="#0">Diversity</a>
                             </span>
                         </div>
                         <h1 class="s-hero__slide-text">
@@ -225,6 +225,119 @@
             </button>
         </div> <!-- end s-hero__arrows -->
 
+        <!-- Auto-rotation script -->
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                const slides = document.querySelectorAll('.s-hero__slide');
+                let currentSlide = 0;
+                
+                function showSlide(index) {
+                    // Hide all slides
+                    slides.forEach(slide => {
+                        slide.classList.remove('active');
+                        slide.style.opacity = '0';
+                        slide.style.zIndex = '1';
+                    });
+                    
+                    // Show current slide
+                    slides[index].classList.add('active');
+                    slides[index].style.opacity = '1';
+                    slides[index].style.zIndex = '2';
+                }
+                
+                function nextSlide() {
+                    currentSlide = (currentSlide + 1) % slides.length;
+                    showSlide(currentSlide);
+                }
+                
+                function prevSlide() {
+                    currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+                    showSlide(currentSlide);
+                }
+                
+                // Initialize first slide
+                showSlide(0);
+                
+                // Auto-rotate every 5 seconds
+                setInterval(nextSlide, 5000);
+                
+                // Add click handlers for navigation arrows
+                document.querySelector('.s-hero__arrow-prev').addEventListener('click', prevSlide);
+                document.querySelector('.s-hero__arrow-next').addEventListener('click', nextSlide);
+                
+                // Pause auto-rotation on hover (optional)
+                const heroSection = document.querySelector('.s-hero');
+                let autoRotateInterval;
+                
+                function startAutoRotate() {
+                    autoRotateInterval = setInterval(nextSlide, 15000);
+                }
+                
+                function stopAutoRotate() {
+                    clearInterval(autoRotateInterval);
+                }
+                
+                startAutoRotate();
+                
+                heroSection.addEventListener('mouseenter', stopAutoRotate);
+                heroSection.addEventListener('mouseleave', startAutoRotate);
+            });
+        </script>
+        
+        <style>
+            .s-hero__slide {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                opacity: 0;
+                transition: opacity 1s ease-in-out;
+                z-index: 1;
+            }
+            
+            .s-hero__slide.active {
+                opacity: 1;
+                z-index: 2;
+            }
+            
+            .s-hero__slide-bg {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+            }
+            
+            .s-hero__slide-content {
+                position: relative;
+                z-index: 10;
+                opacity: 1 !important;
+            }
+            
+            .s-hero__slide-meta {
+                position: relative;
+                z-index: 10;
+                opacity: 1 !important;
+            }
+            
+            .s-hero__slide-text {
+                position: relative;
+                z-index: 10;
+                opacity: 1 !important;
+            }
+            
+            .s-hero__slide.active .s-hero__slide-content,
+            .s-hero__slide.active .s-hero__slide-meta,
+            .s-hero__slide.active .s-hero__slide-text {
+                opacity: 1 !important;
+                visibility: visible !important;
+            }
+        </style>
+
     </section> <!-- end s-hero -->
 
 
@@ -250,12 +363,12 @@
                     <!-- <hr class="fancy"> -->
                 </div>
 
-            </div> <!-- end row -->
+            </div> <br><br> <!-- end row -->
            
-            <div style="margin-left:88px; margin-bottom:40px"><h2>How TRON Works</h2></div>
+                            <div class="section-header"><h2>How TRON Works</h2></div>
             <div class="row">
                 <div class="column large-6 intro animated-text slide-in">
-                    <img src="images/_.jpeg" alt="">
+                    <img src="images/_.jpeg" alt="" class="animated-image">
                     <p>TRON’s electric buses use renewable energy and smart technology to provide clean, 
                         efficient city travel. Powered by green energy and guided by advanced GPS, our buses 
                         reduce emissions and improve urban connectivity. TRON is your eco-friendly choice for a better,
@@ -263,7 +376,7 @@
                     </p>
                 </div>
                 <div class="column large-6 intro animated-text slide-in-right">
-                    <img src="images/i.jpg" alt="">
+                    <img src="images/i.jpg" alt="" class="animated-image">
                     <p>
                         The future looks bright with us, join us as we coordinate multiple routes,
                          ensure passenger safety, and improve connectivity. With our expertise
@@ -301,7 +414,7 @@
         </section> <!-- end s-styles -->
         <section class="wantToWork-area w-padding section-bg">
             <div class="container">
-                <div class="row align-items-center justify-content-between" style="text-align: center;">
+                <div class="row align-items-center justify-content-between centered-content">
                     <div class="col-xl-6 col-lg-7 col-md-8 col-sm-10"> 
                         <div class="wantToWork-caption">
                             <!-- <h2 style="padding-bottom:20px">How TRON Works</h2>
@@ -311,77 +424,181 @@
                                  more inclusive future in transportation.
                             </span> -->
                             <div class="row">
-                               <div class="column large-12"><h1 style="color:aliceblue">Core Features</h1></div> 
-                                <div class="column large-3">
-                                    <div class="card" style="border-radius: 5%;">
-                                    <div class="card-body">
-                                        <span class="material-symbols-outlined">
-                                            ev_station
-                                            </span>
-                                        <h5>
-                                            Electric-Only Fleet
-                                        </h5>
-                                        <small>
-                                            Every ride is powered by 100% electric buses — clean, 
-                                            quiet, and carbon-free. Our commitment to green energy means 
-                                            you move without leaving a footprint.
-      </small>
-                                        </small>
+                               <div class="column large-12 core-features">
+                                   <h1>Core Features</h1>
+                                   <p class="section-subtitle">Cutting-edge technology driving urban mobility progress.</p>
+                               </div> 
+                            </div>
+                            
+                            <div class="core-features-grid">
+                                <div class="core-feature-card">
+                                    <div class="core-feature-icon">
+                                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#4CAF50" stroke-width="2">
+                                            <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
+                                        </svg>
                                     </div>
-                                    </div>
-                                </div>
-                                <div class="column large-3">
-                                    <div class="card" style="border-radius: 5%;">
-                                    <div class="card-body">
-                                        <span class="material-symbols-outlined">
-                                            travel_explore
-                                            </span>
-                                        <h5>
-                                            Smarter Routes, Smoother Rides
-                                        </h5>
-                                        <small>
-                                            No more guessing! Our AI maps the best routes in real-time, 
-                                            so you get there quicker, smoother, and stress-free — every time.
-                                        </small>
-                                    </div>
+                                    <h3>Electric-Only Fleet</h3>
+                                    <p>Every ride is powered by 100% electric buses — clean, quiet, and carbon-free.</p>
+                                    <div class="feature-tags">
+                                        <span>Zero emissions</span>
+                                        <span>Green energy</span>
+                                        <span>Carbon-free</span>
                                     </div>
                                 </div>
-                                <div class="column large-3">
-                                    <div class="card" style="border-radius: 5%;">
-                                    <div class="card-body">
-                                        <span class="material-symbols-outlined">
-                                            credit_card
-                                            </span>
-                                        <h5>
-                                            Subscriptions that Just Make Sense
-                                        </h5>
-                                        <small>
-                                            One pass, endless rides. Pick a plan that fits your life and ride whenever, 
-                                            wherever — no tickets, no hassle, no surprises.
-                                        </small>
+                                
+                                <div class="core-feature-card">
+                                    <div class="core-feature-icon">
+                                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#4CAF50" stroke-width="2">
+                                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                                        </svg>
                                     </div>
+                                    <h3>Smarter Routes</h3>
+                                    <p>AI maps the best routes in real-time, so you get there quicker and stress-free.</p>
+                                    <div class="feature-tags">
+                                        <span>Real-time AI</span>
+                                        <span>Optimized routes</span>
+                                        <span>Stress-free</span>
                                     </div>
                                 </div>
-                                <div class="column large-3">
-                                    <div class="card" style="border-radius: 5%;">
-                                    <div class="card-body">
-                                        <span class="material-symbols-outlined">
-                                            electric_car
-                                            </span>
-                                        <h5>
-                                            Diverse Mobility
-                                        </h5>
-                                        <small>
-                                            TRON moves more than people — we enable the transport of goods, packages, 
-                                            and communities. Inclusive, accessible, and built for everyone.
-      </small>
+                                
+                                <div class="core-feature-card">
+                                    <div class="core-feature-icon">
+                                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#4CAF50" stroke-width="2">
+                                            <path d="M9 21c0 .55.45 1 1 1h4c.55 0 1-.45 1-1v-1H9v1zm3-19C8.14 2 5 5.14 5 9c0 2.38 1.19 4.47 3 5.74V17c0 .55.45 1 1 1h6c.55 0 1-.45 1-1v-2.26c1.81-1.27 3-3.36 3-5.74 0-3.86-3.14-7-7-7zm2.85 11.1l-.85.6V16h-4v-2.3l-.85-.6A4.997 4.997 0 0 1 7 9c0-2.76 2.24-5 5-5s5 2.24 5 5c0 1.63-.8 3.16-2.15 4.1z"/>
+                                        </svg>
                                     </div>
+                                    <h3>Smart Subscriptions</h3>
+                                    <p>One pass, endless rides. Pick a plan that fits your life and ride whenever.</p>
+                                    <div class="feature-tags">
+                                        <span>Flexible plans</span>
+                                        <span>No hassle</span>
+                                        <span>Endless rides</span>
+                                    </div>
+                                </div>
+                                
+                                <div class="core-feature-card">
+                                    <div class="core-feature-icon">
+                                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#4CAF50" stroke-width="2">
+                                            <path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"/>
+                                            <path d="M12 8v8"/>
+                                            <path d="M8 12h8"/>
+                                        </svg>
+                                    </div>
+                                    <h3>Diverse Mobility</h3>
+                                    <p>TRON moves more than people — we enable transport of goods and communities.</p>
+                                    <div class="feature-tags">
+                                        <span>Inclusive</span>
+                                        <span>Accessible</span>
+                                        <span>For everyone</span>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                    
+                </div>
+            </div>
+        </section>
+        
+        <!-- TRON Innovation Hub Section -->
+        <section class="innovation-hub">
+            <div class="container">
+                <div class="row">
+                    <div class="column large-12">
+                        <div class="text-center">
+                            <h2>TRON Innovation Hub</h2>
+                            <p class="section-subtitle">Where tomorrow's mobility meets today's technology</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Innovation Grid -->
+                <div class="innovation-showcase">
+                    <div class="innovation-row">
+                        <div class="innovation-item">
+                            <h3>AI-Powered Fleet Management</h3>
+                            <p>Our proprietary AI algorithms optimize routes in real-time, reducing wait times by 60% and improving efficiency across the entire network.</p>
+                            <div class="tech-specs">
+                                <span>Machine Learning</span>
+                                <span>Real-time Analytics</span>
+                            </div>
+                        </div>
+                        
+                        <div class="innovation-item">
+                            <h3>Smart Energy Grid</h3>
+                            <p>Integrated with renewable energy sources, our charging infrastructure ensures 100% clean power for every journey.</p>
+                            <div class="tech-specs">
+                                <span>Solar Integration</span>
+                                <span>Battery Optimization</span>
+                                <span>Grid Balancing</span>
+                            </div>
+                        </div>
+                        
+                        <div class="innovation-item">
+                            <h3>Connected Ecosystem</h3>
+                            <p>Seamless integration with smart city infrastructure, enabling traffic signal optimization and priority routing.</p>
+                            <div class="tech-specs">
+                                <span>IoT Sensors</span>
+                                <span>5G Connectivity</span>
+                                <span>City Integration</span>
+                            </div>
+                        </div>
+                        
+                        <div class="innovation-item">
+                            <h3>Autonomous Safety</h3>
+                            <p>Advanced driver assistance systems and collision prevention technology ensure the safest possible journey for all passengers.</p>
+                            <div class="tech-specs">
+                                <span>ADAS Systems</span>
+                                <span>Collision Prevention</span>
+                                <span>Emergency Response</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Future Vision -->
+                <div class="future-vision">
+                    <div class="vision-content">
+                        <h3>The Future is Electric, Connected, and Autonomous</h3>
+                        <p>By 2030, TRON will operate the world's largest autonomous electric bus network, connecting 50+ cities across Africa with zero-emission, AI-driven transportation that adapts to your needs in real-time.</p>
+                        <div class="vision-stats">
+                            <div class="vision-stat">
+                                <span class="stat-number">50+</span>
+                                <span class="stat-label">Cities Connected</span>
+                            </div>
+                            <div class="vision-stat">
+                                <span class="stat-number">100%</span>
+                                <span class="stat-label">Autonomous Fleet</span>
+                            </div>
+                            <div class="vision-stat">
+                                <span class="stat-number">0</span>
+                                <span class="stat-label">Carbon Emissions</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="vision-visual">
+                        <div class="tech-particles">
+                            <div class="particle"></div>
+                            <div class="particle"></div>
+                            <div class="particle"></div>
+                            <div class="particle"></div>
+                            <div class="particle"></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- CTA Section -->
+                <div class="cta-section">
+                    <div class="row">
+                        <div class="column large-12 text-center">
+                            <h3>Ready to Experience the Future of Transportation?</h3>
+                            <p>Join TRON today and be part of the sustainable mobility revolution</p>
+                            <div class="cta-buttons">
+                                <a href="contact.html" class="btn btn-primary">Get Started</a>
+                                <a href="about.html" class="btn btn-secondary">Learn More</a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -472,6 +689,67 @@
     <script src="js/jquery-3.5.0.min.js"></script>
     <script src="js/plugins.js"></script>
     <script src="js/main.js"></script>
+    
+    <!-- Lazy Loading and Animation Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Intersection Observer for lazy loading and animations
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -100px 0px'
+            };
+            
+            const observer = new IntersectionObserver(function(entries) {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        // Add animate class to trigger animations
+                        entry.target.classList.add('animate');
+                        
+                        // Lazy load images if they exist
+                        const images = entry.target.querySelectorAll('img[data-src]');
+                        images.forEach(img => {
+                            img.src = img.dataset.src;
+                            img.classList.remove('lazy');
+                        });
+                    }
+                });
+            }, observerOptions);
+            
+            // Observe all sections and animated elements
+            const animatedElements = document.querySelectorAll(`
+                .s-hero__slide,
+                .intro,
+                .animated-text,
+                .section-header,
+                .animated-image,
+                .core-feature-card,
+                .innovation-item,
+                .future-vision,
+                .cta-section,
+                .metric-item,
+                .story-card,
+                .vision-stat,
+                .tech-specs span,
+                .feature-tags span
+            `);
+            
+            animatedElements.forEach(element => {
+                observer.observe(element);
+            });
+            
+            // Initialize animations for elements that are already visible
+            setTimeout(() => {
+                const visibleElements = document.querySelectorAll(`
+                    .s-hero__slide.active,
+                    .intro,
+                    .animated-text
+                `);
+                visibleElements.forEach(element => {
+                    element.classList.add('animate');
+                });
+            }, 100);
+        });
+    </script>
 
 </body>
 
