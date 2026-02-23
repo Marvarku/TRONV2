@@ -1,0 +1,1045 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+
+    <!--- basic page needs
+    ================================================== -->
+    <meta charset="utf-8">
+    <title>Diversity & Inclusion - TRON</title>
+    <meta name="description" content="TRON is committed to building a diverse, inclusive, and equitable workplace where everyone can thrive.">
+    <meta name="author" content="">
+
+    <!-- mobile specific metas
+    ================================================== -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- CSS
+    ================================================== -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="css/vendor.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <!-- Custom Styles for Diversity & Inclusion Page -->
+    <style>
+        /* Hero Section - Increased Height */
+        .s-content {
+            padding-left: 0 !important;
+            padding-right: 0 !important;
+            padding-top: 0 !important;
+            padding-bottom: 0 !important;
+        }
+
+        .s-content .row {
+            margin-left: 0 !important;
+            margin-right: 0 !important;
+            margin-top: 0 !important;
+            margin-bottom: 0 !important;
+        }
+
+        .s-content .column {
+            padding-left: 0 !important;
+            padding-right: 0 !important;
+            padding-top: 0 !important;
+            padding-bottom: 0 !important;
+        }
+
+        .s-content__entry {
+            margin-bottom: 0 !important;
+            padding-bottom: 0 !important;
+        }
+
+        .s-content__entry-header {
+            margin-top: 0 !important;
+            padding-top: 4rem !important;
+        }
+
+        section.s-content:first-of-type {
+            margin-bottom: 0 !important;
+            padding-bottom: 0 !important;
+        }
+
+        section.s-content:first-of-type + section.s-content {
+            margin-top: 0 !important;
+            padding-top: 0 !important;
+        }
+
+        .s-about__slide-bg {
+            min-height: 100vh !important;
+            height: 100vh !important;
+            background-size: cover !important;
+            background-position: center 60% !important;
+            background-repeat: no-repeat !important;
+            width: 100% !important;
+            left: 0 !important;
+            right: 0 !important;
+        }
+
+        .s-about__slide-content {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            position: relative;
+            z-index: 10;
+        }
+
+        .hero-title {
+            font-size: 7rem !important;
+            font-weight: 700;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            color: white;
+            text-align: center;
+        }
+
+        .hero-subtitle {
+            font-size: 2.5rem;
+            color: white;
+            text-align: center;
+            text-shadow: 2px 2px 8px rgba(0,0,0,0.8), 0 0 10px rgba(0,0,0,0.5);
+            margin-top: 1.5rem;
+            font-weight: 500;
+            opacity: 1 !important;
+            visibility: visible !important;
+            display: block !important;
+        }
+
+        /* Core Principles - Image Cards */
+        .diversity-principles {
+            padding: 6rem 0;
+            background: #f8f9fa;
+        }
+
+        .principles-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .principle-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .principle-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+        }
+
+        .principle-image {
+            width: 100%;
+            height: 300px;
+            overflow: hidden;
+        }
+
+        .principle-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .principle-card:hover .principle-image img {
+            transform: scale(1.1);
+        }
+
+        .principle-content {
+            padding: 2rem;
+        }
+
+        .principle-content h3 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: #333;
+        }
+
+        .principle-content p {
+            font-size: 1.5rem;
+            color: #666;
+            line-height: 1.6;
+        }
+
+        /* Initiatives - Stylish Cards Design */
+        .diversity-initiatives {
+            padding: 6rem 0;
+            background: #f8f9fa;
+        }
+
+        .initiatives-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2.5rem;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .initiative-card {
+            background: white;
+            border-radius: 20px;
+            padding: 3rem;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            border-top: 4px solid #667eea;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .initiative-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 50px rgba(0,0,0,0.15);
+        }
+
+        .initiative-card:nth-child(2) {
+            border-top-color: #764ba2;
+        }
+
+        .initiative-card:nth-child(3) {
+            border-top-color: #f093fb;
+        }
+
+        .initiative-icon {
+            font-size: 4rem;
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+
+        .initiative-content {
+            flex: 1;
+        }
+
+        .initiative-content h3 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            color: #333;
+            text-align: center;
+        }
+
+        .initiative-content > p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            color: #666;
+            text-align: center;
+            line-height: 1.6;
+        }
+
+        .initiative-content ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .initiative-content ul li {
+            padding: 0.8rem 0;
+            color: #555;
+            position: relative;
+            padding-left: 2rem;
+            font-size: 1.1rem;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        .initiative-content ul li:last-child {
+            border-bottom: none;
+        }
+
+        .initiative-content ul li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #667eea;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        .initiative-card:nth-child(2) .initiative-content ul li:before {
+            color: #764ba2;
+        }
+
+        .initiative-card:nth-child(3) .initiative-content ul li:before {
+            color: #f093fb;
+        }
+
+        /* Impact - Split Image Design */
+        .diversity-impact {
+            padding: 6rem 0;
+            background: #f8f9fa;
+        }
+
+        .impact-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 3rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .impact-item {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0;
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+
+        .impact-reverse {
+            grid-template-columns: 1fr 1fr;
+        }
+
+        .impact-reverse .impact-image {
+            order: 2;
+        }
+
+        .impact-reverse .impact-content {
+            order: 1;
+        }
+
+        .impact-image {
+            width: 100%;
+            height: 100%;
+            min-height: 300px;
+        }
+
+        .impact-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .impact-content {
+            padding: 3rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .impact-content h3 {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            color: #333;
+        }
+
+        .impact-content ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .impact-content ul li {
+            padding: 0.8rem 0;
+            color: #666;
+            position: relative;
+            padding-left: 1.5rem;
+            font-size: 1.1rem;
+        }
+
+        .impact-content ul li:before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: #667eea;
+            font-size: 1.5rem;
+            line-height: 1;
+        }
+
+        /* ERGs - Image Cards */
+        .diversity-ergs {
+            padding: 6rem 0;
+            background: white;
+        }
+
+        .erg-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .erg-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .erg-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+        }
+
+        .erg-image {
+            width: 100%;
+            height: 250px;
+            overflow: hidden;
+        }
+
+        .erg-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .erg-card:hover .erg-image img {
+            transform: scale(1.1);
+        }
+
+        .erg-content {
+            padding: 2rem;
+        }
+
+        .erg-content h3 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            color: #333;
+        }
+
+        .erg-content p {
+            font-size: 1.1rem;
+            color: #666;
+            line-height: 1.7;
+        }
+
+        /* CTA - Gradient Design */
+        .diversity-cta {
+            padding: 6rem 0;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .diversity-cta:before {
+            content: "";
+            position: absolute;
+            top: -50%;
+            right: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+            animation: pulse 4s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); opacity: 0.5; }
+            50% { transform: scale(1.1); opacity: 0.8; }
+        }
+
+        .cta-gradient {
+            text-align: center;
+            position: relative;
+            z-index: 1;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .cta-gradient h2 {
+            font-size: 3rem;
+            color: white;
+            margin-bottom: 1.5rem;
+            font-weight: 700;
+        }
+
+        .cta-gradient p {
+            font-size: 1.3rem;
+            color: rgba(255,255,255,0.95);
+            margin-bottom: 2.5rem;
+            line-height: 1.6;
+        }
+
+        .cta-actions {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .cta-btn-primary,
+        .cta-btn-secondary {
+            padding: 1rem 2.5rem;
+            font-size: 1.1rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+
+        .cta-btn-primary {
+            background: white;
+            color: #667eea;
+        }
+
+        .cta-btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(255,255,255,0.3);
+        }
+
+        .cta-btn-secondary {
+            background: transparent;
+            color: white;
+            border: 2px solid white;
+        }
+
+        .cta-btn-secondary:hover {
+            background: white;
+            color: #667eea;
+            transform: translateY(-3px);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 900px) {
+            .principles-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .initiatives-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .erg-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .impact-item {
+                grid-template-columns: 1fr;
+            }
+
+            .impact-reverse .impact-image {
+                order: 1;
+            }
+
+            .impact-reverse .impact-content {
+                order: 2;
+            }
+
+            .cta-gradient h2 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+
+    <!-- script
+    ================================================== -->
+    <script src="js/modernizr.js"></script>
+    <script defer src="js/fontawesome/all.min.js"></script>
+
+    <!-- favicons
+    ================================================== -->
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="site.webmanifest">
+
+</head>
+
+<body id="top">
+
+
+    <!-- preloader
+    ================================================== -->
+    <div id="preloader"> 
+    	<div id="loader"></div>
+    </div>
+
+
+    <!-- header
+    ================================================== -->
+    <header class="s-header s-header--opaque">
+
+        <div class="s-header__logo">
+            <a class="logo" href="index.html">
+                <!-- <img src="images/logo.svg" alt="Homepage"> -->
+                 <h3>TRON</h3>
+            </a>
+        </div>
+
+        <div class="row s-header__navigation">
+
+            <nav class="s-header__nav-wrap">
+
+                <h3 class="s-header__nav-heading h6">Navigate to</h3>
+
+                <ul class="s-header__nav">
+                    <li><a href="index.html" title="">Home</a></li>
+                    <li class="has-children">
+                        <a href="#0" title="">Company</a>
+                        <ul class="sub-menu">
+                            <li><a href="category.html">Sustainability at TRON</a></li>
+                            <li class="current"><a href="inclusion-diversity.html">Diversity & Inclusion</a></li>
+                            <!-- <li><a href="category.html">Locations</a></li>
+                            <li><a href="category.html">Careers</a></li> -->
+                        </ul>
+                    </li>
+                    <!-- <li class="has-children">
+                        <a href="#0" title="">Newsroom</a>
+                        <ul class="sub-menu">
+                            <li><a href="single-video.html">Video Post</a></li>
+                            <li><a href="single-audio.html">Audio Post</a></li>
+                            <li><a href="single-standard.html">Standard Post</a></li>
+                        </ul>
+                    </li> -->
+                    <!-- <li><a href="styles.html" title="">Resources</a></li> -->
+                    <li><a href="about.html" title="">About</a></li>
+                    <li><a href="contact.html" title="">Contact</a></li>
+                </ul> <!-- end s-header__nav -->
+
+                <a href="#0" title="Close Menu" class="s-header__overlay-close close-mobile-menu">Close</a>
+
+            </nav> <!-- end s-header__nav-wrap -->
+
+        </div> <!-- end s-header__navigation -->
+
+        <a class="s-header__toggle-menu" href="#0" title="Menu"><span>Menu</span></a>
+
+        <div class="s-header__search">
+
+            <div class="s-header__search-inner">
+                <div class="row wide">
+
+                    <form role="search" method="get" class="s-header__search-form" action="#">
+                        <label>
+                            <span class="h-screen-reader-text">Search for:</span>
+                            <input type="search" class="s-header__search-field" placeholder="Search for..." value="" name="s" title="Search for:" autocomplete="off">
+                        </label>
+                        <input type="submit" class="s-header__search-submit" value="Search"> 
+                    </form>
+
+                    <a href="#0" title="Close Search" class="s-header__overlay-close">Close</a>
+
+                </div> <!-- end row -->
+            </div> <!-- s-header__search-inner -->
+
+        </div> <!-- end s-header__search wrap -->	
+
+        <a class="s-header__search-trigger" href="#">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 17.982 17.983"><path fill="#010101" d="M12.622 13.611l-.209.163A7.607 7.607 0 017.7 15.399C3.454 15.399 0 11.945 0 7.7 0 3.454 3.454 0 7.7 0c4.245 0 7.699 3.454 7.699 7.7a7.613 7.613 0 01-1.626 4.714l-.163.209 4.372 4.371-.989.989-4.371-4.372zM7.7 1.399a6.307 6.307 0 00-6.3 6.3A6.307 6.307 0 007.7 14c3.473 0 6.3-2.827 6.3-6.3a6.308 6.308 0 00-6.3-6.301z"/></svg>
+        </a>
+
+    </header> <!-- end s-header -->
+
+
+    <!-- content
+    ================================================== -->
+    <section class="s-content">
+
+        <div class="row">
+            <div class="column large-12">
+
+                <article class="s-content__entry">
+                    <!-- Hero Section -->
+                    <div class="s-about__slide-bg" style="background-image: url('images/slide3-bg-3000.jpg');"></div>
+
+                    <div class="row s-about__slide-content animate-this">
+                        <div class="column">
+                            <h1 class="hero-title animated-text">
+                                Diversity & Inclusion at TRON
+                            </h1>
+                            <p class="hero-subtitle animated-text">
+                                Building a workplace where every voice is heard, every perspective is valued, and everyone can thrive.
+                            </p>
+                        </div>
+                    </div>
+                </article> <!-- end entry -->
+
+            </div> <!-- end column -->
+        </div> <!-- end row -->
+
+    </section> <!-- end s-content -->
+
+    <section class="s-content">
+        <div class="row">
+            <div class="column large-12">
+
+                <div class="s-content__entry-header entry-header-relative animated-text">
+                    <h1 class="s-content__title content-title-white" style="color: #333;">Our Commitment to Diversity & Inclusion</h1>
+                </div> <!-- end s-content__entry-header -->
+            </div>
+        </div>
+        <div class="row">
+            <div class="column large-12">
+                <div class="s-content__primary">
+
+                    <div class="s-content__page-content animated-text">
+
+                        <p class="lead animated-text">
+                            <strong>We believe that diversity and inclusion are not just values—they are fundamental drivers of innovation, creativity, and success.</strong><br>
+                            Our commitment to building a diverse, inclusive, and equitable workplace extends beyond our offices to the communities we serve across Africa and beyond. 
+                            We recognize that the best solutions come from teams that reflect the rich diversity of the world around us.
+                        </p>
+                    </div> <!-- end s-entry__page-content -->
+
+                </div> <!-- end s-content__primary -->
+            </div>
+        </div>
+
+        <!-- Core Principles - Image Cards -->
+        <section class="diversity-principles">
+            <div class="container">
+                <h2 style="text-align: center; margin-bottom: 4rem; font-size: 2.5rem;">Our Core Principles</h2>
+                
+                <div class="principles-grid">
+                    <div class="principle-card">
+                        <div class="principle-image">
+                            <img src="images/diversity/clay-banks-LjqARJaJotc-unsplash.jpg" alt="Diversity">
+                        </div>
+                        <div class="principle-content">
+                            <h3>Diversity</h3>
+                            <p>We celebrate the diversity of backgrounds, experiences, and perspectives that make our team stronger and more innovative.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="principle-card">
+                        <div class="principle-image">
+                            <img src="images/diversity/christina-wocintechchat-com-m-jzonFmreWok-unsplash.jpg" alt="Inclusion">
+                        </div>
+                        <div class="principle-content">
+                            <h3>Inclusion</h3>
+                            <p>We foster an inclusive environment where everyone feels welcome, respected, and empowered to contribute their best work.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="principle-card">
+                        <div class="principle-image">
+                            <img src="images/equity.jpg" alt="Equity">
+                        </div>
+                        <div class="principle-content">
+                            <h3>Equity</h3>
+                            <p>We ensure equitable access to opportunities, resources, and advancement for all team members.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="principle-card">
+                        <div class="principle-image">
+                            <img src="images/diversity/amy-elting-_9ETHblkvXQ-unsplash.jpg" alt="Belonging">
+                        </div>
+                        <div class="principle-content">
+                            <h3>Belonging</h3>
+                            <p>We create a sense of belonging where every team member feels valued and connected to our mission and each other.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Our Initiatives Section - Image Overlay Design -->
+        <section class="diversity-initiatives">
+            <div class="container">
+                <h2 style="text-align: center; margin-bottom: 1rem; font-size: 2.5rem;">Our Diversity & Inclusion Initiatives</h2>
+                <p style="text-align: center; font-size: large; margin-bottom: 4rem; color: #666;">Building a more inclusive future through action and accountability.</p>
+                
+                <div class="initiatives-grid">
+                    <div class="initiative-card">
+                        <div class="initiative-icon">👥</div>
+                        <div class="initiative-content">
+                            <h3>Inclusive Hiring</h3>
+                            <p>Building diverse teams through inclusive recruitment strategies</p>
+                            <ul>
+                                <li>Blind resume reviews</li>
+                                <li>Diverse interview panels</li>
+                                <li>Skills-based hiring</li>
+                                <li>Partnerships with underrepresented groups</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="initiative-card">
+                        <div class="initiative-icon">📈</div>
+                        <div class="initiative-content">
+                            <h3>Growth & Development</h3>
+                            <p>Equitable access to learning and career advancement</p>
+                            <ul>
+                                <li>Mentorship programs</li>
+                                <li>Leadership development</li>
+                                <li>Skills training support</li>
+                                <li>Internal promotion pathways</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="initiative-card">
+                        <div class="initiative-icon">🤝</div>
+                        <div class="initiative-content">
+                            <h3>Inclusive Culture</h3>
+                            <p>Creating environments where everyone can thrive</p>
+                            <ul>
+                                <li>Employee Resource Groups</li>
+                                <li>Diversity training</li>
+                                <li>Flexible work arrangements</li>
+                                <li>Zero-tolerance policies</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Impact Section - Split Image Design -->
+        <section class="diversity-impact">
+            <div class="container">
+                <h2 style="text-align: center; margin-bottom: 1rem; font-size: 2.5rem;">Our Impact</h2>
+                <p style="text-align: center; font-size: large; margin-bottom: 4rem; color: #666;">Measuring progress and driving meaningful change.</p>
+                
+                <div class="impact-grid">
+                    <div class="impact-item">
+                        <div class="impact-image">
+                            <img src="images/diversity/christina-wocintechchat-com-m-jzonFmreWok-unsplash.jpg" alt="Team Diversity">
+                        </div>
+                        <div class="impact-content">
+                            <h3>Team Diversity</h3>
+                            <ul>
+                                <li>Representation across all levels</li>
+                                <li>Gender diversity in leadership</li>
+                                <li>Multicultural global team</li>
+                                <li>Age diversity throughout</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="impact-item impact-reverse">
+                        <div class="impact-image">
+                            <img src="images/diversity/michael-marais-HjV_hEECgcM-unsplash.jpg" alt="Community Impact">
+                        </div>
+                        <div class="impact-content">
+                            <h3>Community Impact</h3>
+                            <ul>
+                                <li>Supporting communities across Africa</li>
+                                <li>Accessible transportation for all</li>
+                                <li>Job creation in underserved areas</li>
+                                <li>Diverse supplier partnerships</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="impact-item">
+                        <div class="impact-image">
+                            <img src="images/diversity/amy-elting-_9ETHblkvXQ-unsplash.jpg" alt="Continuous Improvement">
+                        </div>
+                        <div class="impact-content">
+                            <h3>Continuous Improvement</h3>
+                            <ul>
+                                <li>Regular diversity audits</li>
+                                <li>Employee engagement surveys</li>
+                                <li>Transparent progress reporting</li>
+                                <li>Ongoing learning commitment</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Employee Resource Groups - Image Cards -->
+        <section class="diversity-ergs">
+            <div class="container">
+                <h2 style="text-align: center; margin-bottom: 1rem; font-size: 2.5rem;">Employee Resource Groups</h2>
+                <p style="text-align: center; font-size: large; margin-bottom: 4rem; color: #666;">Building communities where employees connect, support each other, and drive positive change.</p>
+                
+                <div class="erg-grid">
+                    <div class="erg-card">
+                        <div class="erg-image">
+                            <img src="images/diversity/clay-banks-LjqARJaJotc-unsplash.jpg" alt="Women at TRON">
+                        </div>
+                        <div class="erg-content">
+                            <h3>Women at TRON</h3>
+                            <p>Empowering women in technology and transportation through mentorship, networking, and professional development. We're committed to closing the gender gap in STEM fields and leadership positions.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="erg-card">
+                        <div class="erg-image">
+                            <img src="images/diversity/hannah-busing-Zyx1bK9mqmA-unsplash.jpg" alt="TRON Pride">
+                        </div>
+                        <div class="erg-content">
+                            <h3>TRON Pride</h3>
+                            <p>Creating an inclusive environment for LGBTQ+ employees and allies. We celebrate diversity in sexual orientation and gender identity, ensuring all team members feel safe and supported.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="erg-card">
+                        <div class="erg-image">
+                            <img src="images/diversity/vitaly-gariev-e6rPqzAteII-unsplash.jpg" alt="Emerging Leaders">
+                        </div>
+                        <div class="erg-content">
+                            <h3>Emerging Leaders</h3>
+                            <p>Supporting early-career professionals and providing pathways for growth. We invest in the next generation of leaders through mentorship, training, and leadership opportunities.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Call to Action Section - Gradient Design -->
+        <section class="diversity-cta">
+            <div class="container">
+                <div class="cta-gradient">
+                    <h2>Join Our Diverse Team</h2>
+                    <p>We're always looking for talented individuals who bring unique perspectives and experiences to our team. Your difference makes us stronger.</p>
+                    <div class="cta-actions">
+                        <a href="contact.html" class="cta-btn-primary">Get in Touch</a>
+                        <a href="about.html" class="cta-btn-secondary">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </section> <!-- end s-content -->
+
+   
+    <!-- footer
+    ================================================== -->
+    <footer class="s-footer">
+
+        <div class="s-footer__main">
+
+            <div class="row">
+
+                <div class="column large-2 medium-3 tab-6 s-footer__site-links">
+
+                    <h5>Site Links</h5>
+
+                    <ul>
+                        <li><a href="#0">About Us</a></li>
+                        <li><a href="#0">Blog</a></li>
+                        <li><a href="#0">FAQ</a></li>
+                        <li><a href="#0">Terms</a></li>
+                        <li><a href="#0">Privacy Policy</a></li>
+                    </ul>
+
+                </div> <!-- end s-footer__site-links -->  
+
+                <div class="column large-2 medium-3 tab-6 s-footer__social-links">
+
+                    <h5>Follow Us</h5>
+
+                    <ul>
+                        <li><a href="#0">Twitter</a></li>
+                        <li><a href="#0">Facebook</a></li>
+                        <li><a href="#0">Instagram</a></li>
+                    </ul>
+
+                </div> <!-- end s-footer__social links --> 
+
+                <div class="column large-3 medium-6 tab-12 s-footer__subscribe">
+
+                    <h5>Sign Up for Newsletter</h5>
+
+                    <p>Signup to get updates on articles, interviews and events.</p>
+
+                    <div class="subscribe-form">
+                
+                        <form id="mc-form" class="group" novalidate="true">
+
+                            <input type="email" value="" name="dEmail" class="email" id="mc-email" placeholder="Your Email Address" required=""> 
+                
+                            <input type="submit" name="subscribe" value="subscribe" >
+                
+                            <label for="mc-email" class="subscribe-message"></label>
+                
+                        </form>
+
+                    </div>
+
+                </div> <!-- end s-footer__subscribe -->
+
+            </div> <!-- end row -->
+
+        </div> <!-- end s-footer__main -->
+
+        <div class="s-footer__bottom">
+            <div class="row">
+                <div class="column">
+                    <div class="ss-copyright">
+                        <span>© Copyright TRON 2025</span>
+                    </div> <!-- end ss-copyright -->
+                </div>
+            </div> 
+
+            <div class="ss-go-top">
+                <a class="smoothscroll" title="Back to Top" href="#top">
+                    <svg viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg" width="15" height="15"><path d="M7.5 1.5l.354-.354L7.5.793l-.354.353.354.354zm-.354.354l4 4 .708-.708-4-4-.708.708zm0-.708l-4 4 .708.708 4-4-.708-.708zM7 1.5V14h1V1.5H7z" fill="currentColor"></path></svg>
+                </a>
+            </div> <!-- end ss-go-top -->
+        </div> <!-- end s-footer__bottom -->
+
+   </footer> <!-- end s-footer -->
+
+
+    <!-- Java Script
+    ================================================== -->
+    <script src="js/jquery-3.5.0.min.js"></script>
+    <script src="js/plugins.js"></script>
+    <script src="js/main.js"></script>
+
+    <!-- Lazy Loading and Animation Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Intersection Observer for lazy loading and animations
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -100px 0px'
+            };
+
+            const observer = new IntersectionObserver(function(entries) {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        // Add animate class to trigger animations
+                        entry.target.classList.add('animate');
+
+                        // Lazy load images if they exist
+                        const images = entry.target.querySelectorAll('img[data-src]');
+                        images.forEach(img => {
+                            img.src = img.dataset.src;
+                            img.classList.remove('lazy');
+                        });
+                    }
+                });
+            }, observerOptions);
+
+            // Observe all sections and animated elements
+            const animatedElements = document.querySelectorAll(`
+                .s-about__slide-content,
+                .hero-title,
+                .hero-subtitle,
+                .entry-header-relative,
+                .s-content__page-content,
+                .lead,
+                .s-content__blocks,
+                .column,
+                .key-features,
+                .feature-card-new,
+                .icon-wrapper
+            `);
+
+            animatedElements.forEach(element => {
+                observer.observe(element);
+            });
+
+            // Initialize animations for elements that are already visible
+            setTimeout(() => {
+                const visibleElements = document.querySelectorAll(`
+                    .s-about__slide-content,
+                    .hero-title,
+                    .hero-subtitle
+                `);
+                visibleElements.forEach(element => {
+                    element.classList.add('animate');
+                });
+            }, 100);
+        });
+    </script>
+
+</body>
+
+</html>
