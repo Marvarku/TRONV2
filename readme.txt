@@ -2,13 +2,12 @@
 
 DESCRIPTION:
 
-CALVIN is a free HTML blog template that would surely create a strong and lasting first impression 
-on all your visitors. A clean, simple, and versatile blog template that could be used for all sort 
-of purposes. Its simplistic approach to design emphasizes what really matters most — your site's 
-content. This blog template includes pages for frontpage, categories, about, contact and single 
-post which includes standard, video, and audio post. It works great on all devices and is 
-compatible with retina screens and popular web browsers. With Calvin, you now have the perfect 
-tool to build a unique online space for your compelling articles.
+TRON is a modern web experience built to showcase our vision for clean, smart and inclusive mobility.  
+This site highlights who we are, what we stand for, and how we’re reimagining public transportation
+through sustainability, technology, and human‑centered design. You’ll find sections for our story,
+our commitment to sustainability, diversity & inclusion, and ways to get in touch or partner with us.  
+The layout is fully responsive and optimized so stakeholders, partners, and riders can explore TRON
+from any device.
 
 ==================================================================================================
 
